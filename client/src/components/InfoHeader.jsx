@@ -1,15 +1,19 @@
 import React from "react";
 import { Box, Typography, styled } from "@mui/material";
 
-const Container = styled(Box)`
-  background: #f44336;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-`;
+const Container = styled(Box)(({ theme }) => ({
+  background: "#f44336",
+  color: "#fff",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  paddingTop: 10,
+  paddingBottom: 10,
+  marginBottom: 30,
+  [theme.breakpoints.down('md')]:{
+    display: 'none'
+  }
+}));
 
 function InfoHeader() {
   return (
